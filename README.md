@@ -1,4 +1,4 @@
-# Logicrom SDK - Timer API example
+# Logicrom SDK - Display Driver example
 
 Display Panel used for testing is a 3.2inch 320x240 pixels TFT with ILI9340 display controller
 
