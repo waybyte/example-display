@@ -121,21 +121,21 @@ static void ili9340_blit_prepare(uint16_t x0, uint16_t y0, uint16_t x1, uint16_t
 	static uint8_t ili9340_fb[4];
 
 	/* Set the rectangular area */
-    display_write_cmd(ILI9340_CASET);
-    ili9340_fb[0] = (x0 >> 8);
-    ili9340_fb[1] = (0x00FF & x0);
-    ili9340_fb[2] = (x1 >> 8);
-    ili9340_fb[3] = (0x00FF & x1);
-    ili9340_data_array(ili9340_fb, 4);
+	display_write_cmd(ILI9340_CASET);
+	ili9340_fb[0] = (x0 >> 8);
+	ili9340_fb[1] = (0x00FF & x0);
+	ili9340_fb[2] = (x1 >> 8);
+	ili9340_fb[3] = (0x00FF & x1);
+	ili9340_data_array(ili9340_fb, 4);
 
-    display_write_cmd(ILI9340_PASET);
-    ili9340_fb[0] = (y0 >> 8);
-    ili9340_fb[1] = (0x00FF & y0);
-    ili9340_fb[2] = (y1 >> 8);
-    ili9340_fb[3] = (0x00FF & y1);
-    ili9340_data_array(ili9340_fb, 4);
+	display_write_cmd(ILI9340_PASET);
+	ili9340_fb[0] = (y0 >> 8);
+	ili9340_fb[1] = (0x00FF & y0);
+	ili9340_fb[2] = (y1 >> 8);
+	ili9340_fb[3] = (0x00FF & y1);
+	ili9340_data_array(ili9340_fb, 4);
 
-    display_write_cmd(ILI9340_RAMWR);
+	display_write_cmd(ILI9340_RAMWR);
 }
 
 /**
